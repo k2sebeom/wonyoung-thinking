@@ -1,6 +1,8 @@
 from typing import List
+import os
 
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse
 from fastapi.middleware import Middleware
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -37,3 +39,9 @@ def create_app() -> FastAPI:
 
 
 app = create_app()
+
+@app.get('/')
+async def main():
+    with open(os.path.join(os.path.dirname(__file__), '../templates/index.html'), 'r') as f:
+        s = f.read()
+    return HTMLResponse(s)
