@@ -1,27 +1,5 @@
-# Fast API Template
+# 원영적 사고
 
-## To setup
-```
-pipenv install
-pipenv shell
-```
+## 🤭🤭 럭키비키잖아 🍀
 
-## To Run
-```
-python3 main.py
-```
-
-## APIs
-GET /scene
-POST /question
-    {
-        script: string,
-        target: string,
-        question: string
-    }
-POST /answer
-    {
-        script: string,
-        answer: string
-    }
-
+![thumbnail](./assets/thumbnail.png)
