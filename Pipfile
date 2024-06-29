@@ -9,6 +9,7 @@ fastapi = "*"
 python-dotenv = "*"
 openai = "*"
 pydantic-settings = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 

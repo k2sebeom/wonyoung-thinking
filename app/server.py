@@ -8,6 +8,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from api import router
 
+from core.db import init_db
+
 
 def init_routers(app_: FastAPI) -> None:
     app_.include_router(router)
@@ -35,6 +37,7 @@ def create_app() -> FastAPI:
         middleware=make_middleware(),
     )
     init_routers(app_=app_)
+    init_db()
     return app_
 
 
